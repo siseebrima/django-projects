@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+  <h1>DELETE.HTML</h1>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="pk">PK Number:</label>
+      <input
+        type="text"
+        name="pk"
+        id="pk"
+        class="form-control"
+        placeholder="pk"
+        aria-describedby="enter primary key"
+      />
+      <small id="enter primary key" class="text-muted"></small>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock content %}
